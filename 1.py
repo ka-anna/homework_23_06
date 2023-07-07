@@ -8,6 +8,7 @@ ls2 = [2,118,7,4]
 s_ls1 = []
 s_ls2 = []
 res = []
+res_s = []
 def merge (s_ls1, s_ls2):
     global res
     for i in range (0,len(ls1)):
@@ -17,6 +18,9 @@ def merge (s_ls1, s_ls2):
         s_ls2.append(min(ls2))
         ls2.remove(min(ls2))
     res = s_ls1 + s_ls2
-    return res.sort()
+    return res
 merge(s_ls1, s_ls2)
-print(res)
+for i in range (0,len(res)):
+        res_s.append(min(res))
+        res.remove(min(res))
+print(res_s)
